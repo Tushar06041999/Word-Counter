@@ -1,0 +1,49 @@
+.container{
+    background-color:lightblue;
+    height:550px;
+}
+.section{
+    margin-left:20px;
+}
+.para{
+    font-size:28px;
+}
+h2,h4{
+    margin-left:350px;
+}
+#text-area{
+    height:250px;
+    width:80%;
+    border-radius:15px;
+}
+#clear{
+    background-color:red !important;
+    padding:10px;
+    width:100px;
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+      background-color: lightblue;
+    }
+    .container{
+        height:100px;
+    }
+    .para{
+        font-size:20px;
+    }
+    h2,h4{
+        margin-left:0px;
+    }
+    h2,h4,.para{
+        text-align:center;
+    }
+    #text-area{
+        height:300px;
+        width:90%;
+        box-shadow:20px;
+    }
+    #clear{
+        margin-left:140px;
+    }
+  }

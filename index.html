@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word & Charectar Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>Word & Character Counter</h2>
+            <h4>project No 02</h4>
+            <div class="para">
+                <p>Word:<span id="word">0</span></p>
+                <p>Character:<span id="char">0</span></p>
+            </div>
+            <textarea name="" id="text-area" cols="30" rows="10" placeholder="Type here to get word and charectar value...."></textarea><br><br>
+            <input type="button" value="Clear" id="clear">
+        </div>
+    </div>
+   
+</body>
+
+<script> 
+let wordOne=document.getElementById('word');
+    let char1=document.getElementById('char');
+    let text=document.getElementById('text-area');
+    let clear1=document.getElementById('clear');
+    text.addEventListener('input',function(){
+        let charCount=text.value.length;
+        char1.innerText=charCount;
+
+        //word count
+        let wordCount=text.value;
+        wordCount=wordCount.trim();
+        let wordCount1=wordCount.split(' ');
+        if(wordCount1[1]==0){
+            wordOne.innertext="0";
+        }else{
+            wordOne.innerText=wordCount1.length;
+        }
+    })
+    clear.addEventListener('click',function(){
+        text.value=" ";
+        char1.innerText=0;
+        wordOne.innerText=0;
+    })
+</script>
+
+</html>
